@@ -1,0 +1,13 @@
+ _____             _                   
+|     |___ ___ ___| |_ ___ ___ ___ ___ 
+|  |  | . | -_|   |  _| .'| . | -_|_ -|
+|_____|  _|___|_|_|_| |__,|  _|___|___|
+      |_|                 |_|          
+
+opentape.fm is cool but we need a way to aggregate all the tapes around.
+
+step 1. create the aggregator, searchable database and playlist registration.
+
+step 2. remote playlist ping.
+
+step 3. api.
