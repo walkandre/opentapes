@@ -1,0 +1,24 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;outline: 0;font-style: inherit;font-size: 100%;font-family: inherit;vertical-align: baseline;}
+ol, ul {list-style: none;}
+table {border-collapse: separate;border-spacing: 0;}
+caption, th, td {text-align: left;font-weight: normal;}
+blockquote:before, blockquote:after,q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+
+body {color:#111;background:#fff;font: 13px/1.6em Arial, "Lucida Grande", "Trebuchet MS", sans-serif;text-align:center;}
+a {color:#005AC8;text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+h1{font-size:30px;padding:10px 0;}
+
+.banner{color:#fff;padding:20px;background:#111;}
+.banner a{color:#fff;}
+.banner p{font-size:20px;color:#aaa;}
+.content{margin:20px 0 0;}
+.section, .post{border-bottom:1px solid #ddd;margin:0 0 20px;padding:0 20px 20px;position:relative;}
+.section h2, .post h2{font-size:18px;line-height:15px;margin:10px 0 0;}
+.section p, .post p{color:#333;margin:5px 0 10px 0;}
+.container {width:550px;margin:0 auto;text-align:left;}
+.section ul li {list-style:square;margin:0 0 5px 20px;font-size:18px;color:#666;}
+.post .date {width:70px;text-align:left;font-weight:700;font-size:11px;text-transform:uppercase;line-height:20px;position:absolute;right:-70px;top:0;color:#000;}
+.post .date a {background:url(http://news.opentape.fm/themes/5/permalink.gif) left center no-repeat;padding-left:20px;}
