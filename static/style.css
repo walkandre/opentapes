@@ -22,3 +22,9 @@ h1{font-size:30px;padding:10px 0;}
 .section ul li {list-style:square;margin:0 0 5px 20px;font-size:18px;color:#666;}
 .post .date {width:70px;text-align:left;font-weight:700;font-size:11px;text-transform:uppercase;line-height:20px;position:absolute;right:-70px;top:0;color:#000;}
 .post .date a {background:url(http://news.opentape.fm/themes/5/permalink.gif) left center no-repeat;padding-left:20px;}
+
+#search {
+	width: 525px;
+	font-size: 30px;
+	padding: 10px 5px
+}
