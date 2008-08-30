@@ -21,6 +21,12 @@ urlpatterns = patterns('opentapes.views',
 	(r'^create', 'create'),
 	(r'^search/(\w+)/$', 'search'),
 
+# api methods
+
+	(r'^api/query/$', 'query'),
+	(r'^api/ping/$', 'ping'),
+
+
     # Uncomment this for admin:
 #     (r'^admin/', include('django.contrib.admin.urls')),
 )

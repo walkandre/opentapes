@@ -16,6 +16,8 @@
 
 import os
 
+APPEND_SLASH=False
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 

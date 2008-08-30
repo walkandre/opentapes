@@ -1,7 +1,32 @@
 {% extends "base.html" %}
 
+{% block javascript %}
+<script type="text/javascript">
+	function sendQuery(key) {
+		if(key=="") return;
+
+		$.getJSON("/api/query/", {song: key}, onQuery);
+	}
+
+	function onQuery(data) {
+		str = ""
+		for(var i=0;i<data.length;i++) {
+			str += '<li>' + data[i].title + '||' + data[i].info + '</li>'
+		}
+		
+		
+		$("#live_search").html(str);
+	}
+</script>
+{% endblock %}
+
 {% block content %}
-<form id="search" action="/search/" method="post" autocomplete="off">
-	<input type="text" name="search" id="search" value="Live Search" defaulttext="Live Search" />
-</form>
+	<form id="search" action="/search/" method="post" autocomplete="off">
+		<input type="text" name="search" id="search" value="Live Search" defaulttext="Live Search" onKeyUp="sendQuery(this.value)" />
+	</form>
+	<div id="live_search">
+		<ul>
+			<li>lorem ipsum dolor</li>
+		</ul>
+	</div>
 {% endblock %}

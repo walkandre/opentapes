@@ -6,19 +6,26 @@
 	<head>
 		<title>Opentape</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" type="text/css" href="/static/style.css" />		
+		<link rel="stylesheet" type="text/css" href="/static/style.css" />
+		{% block css %}{% endblock %}
+		<script type="text/javascript" src="static/jquery-1.2.6.min.js"></script>
+		{% block javascript %}{% endblock %}
 	</head>
 	<body>
 		<div class="container">
 			<div class="banner">
-					<h1><a href="#">OPENTAPES</a></h1> 
+					<h1><a href="/">OPENTAPES</a></h1> 
 					<p>a free way to <strike>make and host your own web mixtape</strike> index mixtapes</p>
 			</div>
-										
+			<div>
+				<a href="/create">add your own!</a>
+			</div>
 			<div class="content">
 
 				{% block content %}{% endblock %}
-			
+				
+				
+				
 				<div class="section">
 					Opentapes is not affiliated with <a href="http://opentape.fm">Opentape</a> and is not affiliated with <a href="http://muxtape.com">Muxtape</a>
 				</div>

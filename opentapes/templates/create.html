@@ -2,5 +2,12 @@
 
 
 {% block content %}
-	create
+
+<form method="post" action="create" />
+	<input type="text" name="playlist_location" value="http://sabotagem.com.br/mulambos/">
+	<input type="submit" value="import playlist">
+</form>
+
+<h1>{{ flash }}</h1>
+
 {% endblock %}
