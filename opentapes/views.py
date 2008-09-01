@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 from django.utils import simplejson
+import re 
 
 
 
@@ -32,7 +33,12 @@ def create(request):
 		result = urlfetch.fetch(url + "code/xspf.php")
 
 		if result.status_code == 200:
-			xml = minidom.parseString(result.content)
+#			xml = minidom.parseString(unicode(result.content, "utf-8" ))
+			try:
+				xml = minidom.parseString(result.content.replace("&", "&amp;"))
+			except:
+				return render_to_response('create.html', {'flash' : "Ops. Something went wrong!!!..."})
+			
 			tracks = xml.getElementsByTagName('track')
 			playlist = Playlist(title="lorem ipsum dolor", location=url)
 			playlist.save()
