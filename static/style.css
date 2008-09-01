@@ -90,6 +90,11 @@ a.add_button:link, a.add_button:hover, a.add_button:visited, .add_button:active,
 	padding: 3px 5px;
 }
 
+.import_playlist {
+	margin: 10px 0 0;
+	border: 0;
+}
+
 #livesearch, #playlist_location {
 	width: 536px;
 	font-size: 30px;
