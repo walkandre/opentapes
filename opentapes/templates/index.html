@@ -2,6 +2,16 @@
 
 {% block javascript %}
 <script type="text/javascript">
+	$(function() {
+		$("#livesearch").focus(function() {
+			if ($(this).val() == "Live Search") $(this).val("");
+		})
+
+		$("#livesearch").keyup(function() {
+			sendQuery($(this).val());		
+		})
+	})
+
 	function sendQuery(key) {
 		if(key=="") return;
 
@@ -11,22 +21,21 @@
 	function onQuery(data) {
 		str = ""
 		for(var i=0;i<data.length;i++) {
-			str += '<li>' + data[i].title + '||' + data[i].info + '</li>'
+			li_class = (i%2 == 0)?"even":"odd";
+			str += '<li class="' + li_class + '"><p>' + data[i].title + '</p><a href="' + data[i].info + '" class="goto_opentape">GO TO OPENTAPE</a><div class="clear"><!----></div></li>'
 		}
 		
-		
-		$("#live_search").html(str);
+		$("#songs_list").html(str);
+
 	}
 </script>
 {% endblock %}
 
 {% block content %}
+	<a href="/create" class="add_button">add your own!</a>
+	<div class="clear"><!----></div>
 	<form id="search" action="/search/" method="post" autocomplete="off">
-		<input type="text" name="search" id="search" value="Live Search" defaulttext="Live Search" onKeyUp="sendQuery(this.value)" />
+		<input type="text" name="search" id="livesearch" value="Live Search" />
 	</form>
-	<div id="live_search">
-		<ul>
-			<li>lorem ipsum dolor</li>
-		</ul>
-	</div>
+	<div id="live_search"><ul id="songs_list"></ul></div>
 {% endblock %}

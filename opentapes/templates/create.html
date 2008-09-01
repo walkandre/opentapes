@@ -1,13 +1,25 @@
 {% extends "base.html" %}
 
+{% block javascript %}
+<script type="text/javascript">
+	$(function() {
+		$("#playlist_location").focus(function() {
+			if ($(this).val() == "Playlist URL") $(this).val("");
+		})
+	})
+</script>
+
+{% endblock %}
 
 {% block content %}
 
 <form method="post" action="create" />
-	<input type="text" name="playlist_location" value="http://sabotagem.com.br/mulambos/">
-	<input type="submit" value="import playlist">
+	<input type="text" name="playlist_location" id="playlist_location" value="Playlist URL" />
+	<input type="submit" class="import_playlist" value="add playlist" />
+	<div class="clear"><!----></div>
+	<a href="/" class="right">or go back</a>
 </form>
-
-<h1>{{ flash }}</h1>
+<div class="clear"><!----></div>
+<p class="playlist_message">{{ flash }}</p>
 
 {% endblock %}

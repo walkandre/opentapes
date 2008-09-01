@@ -53,7 +53,7 @@ def create(request):
 					s.playlist = playlist
 					s.save()
 
-			return render_to_response('create.html', {'flash' : "OK!!!"})
+			return render_to_response('create.html', {'flash' : "Playlist added! <a href=\"/\">Go back to home page.</a>"})
 
 	return render_to_response('create.html')
 

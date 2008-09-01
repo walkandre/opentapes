@@ -1,30 +1,112 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;outline: 0;font-style: inherit;font-size: 100%;font-family: inherit;vertical-align: baseline;}
-ol, ul {list-style: none;}
-table {border-collapse: separate;border-spacing: 0;}
-caption, th, td {text-align: left;font-weight: normal;}
-blockquote:before, blockquote:after,q:before, q:after {content: "";}
-blockquote, q {quotes: "" "";}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
 
-body {color:#111;background:#fff;font: 13px/1.6em Arial, "Lucida Grande", "Trebuchet MS", sans-serif;text-align:center;}
-a {color:#005AC8;text-decoration:none;}
+html, body {height: 100%}
+
+body {
+	color:#111;
+	background:#fff;
+	font: 13px/1.6em Arial, "Lucida Grande", "Trebuchet MS", sans-serif;
+	text-align:center
+}
+
+ol, ul {list-style: none;}
+
+
+a {
+	color:#005AC8;
+	text-decoration:none
+}
+
 a:hover {text-decoration:underline;}
 
-h1{font-size:30px;padding:10px 0;}
+h1 {
+	font-size:30px;
+	padding:10px 0;
+}
 
-.banner{color:#fff;padding:20px;background:#111;}
+.banner {
+	color:#fff;
+	padding:20px;
+	background:#111;
+}
+
 .banner a{color:#fff;}
-.banner p{font-size:20px;color:#aaa;}
-.content{margin:20px 0 0;}
-.section, .post{border-bottom:1px solid #ddd;margin:0 0 20px;padding:0 20px 20px;position:relative;}
-.section h2, .post h2{font-size:18px;line-height:15px;margin:10px 0 0;}
-.section p, .post p{color:#333;margin:5px 0 10px 0;}
-.container {width:550px;margin:0 auto;text-align:left;}
-.section ul li {list-style:square;margin:0 0 5px 20px;font-size:18px;color:#666;}
-.post .date {width:70px;text-align:left;font-weight:700;font-size:11px;text-transform:uppercase;line-height:20px;position:absolute;right:-70px;top:0;color:#000;}
-.post .date a {background:url(http://news.opentape.fm/themes/5/permalink.gif) left center no-repeat;padding-left:20px;}
 
-#search {
-	width: 525px;
+.banner p{
+	font-size:20px;
+	color:#aaa;
+}
+
+.content{
+	margin:20px 0 0;
+	padding-bottom: 40px;
+}
+
+.section {
+	text-align: center;
+	border-top: 1px solid #DDD;
+	padding-top: 10px
+}
+
+.section p {
+	color:#333;
+	margin:5px 0 10px 0;
+}
+
+.container {
+	position: relative;	
+	width: 550px;
+	min-height: 100%
+	margin: 0 auto;
+	text-align: left;
+} * html .container {height: 100%}
+
+#footer {
+	position: relative;
+	width: 550px;
+	margin: -40px auto 0;
+}
+
+.right {float: right}
+
+.clear {clear: both}
+
+a.add_button:link, a.add_button:hover, a.add_button:visited, .add_button:active, .import_playlist  {
+	display: block;
+	float: right;
+	color: #FFF;
+	text-decoration: none;
+	background-color: #005AC8;
+	margin-bottom: 20px;
+	padding: 3px 5px;
+}
+
+#livesearch, #playlist_location {
+	width: 536px;
 	font-size: 30px;
 	padding: 10px 5px
 }
+
+#songs_list {margin: 20px 0}
+
+#songs_list li {
+	clear: both;
+	padding: 10px;
+}
+
+#songs_list li.odd {background-color: #CCC}
+
+#songs_list p {float: left}
+
+a.goto_opentape:link, a.goto_opentape:hover, a.goto_opentape:visited, a.goto_opentape:active {float: right} 
+
+.playlist_message {margin-top: 20px}
